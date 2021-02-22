@@ -21,11 +21,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x0000
-#define DEVICE_VER      0x0003
+#define PRODUCT_ID      0x6060
+#define DEVICE_VER      0x0001
 #define MANUFACTURER    LGe
-#define PRODUCT         lge42
-#define DESCRIPTION     BT
+#define PRODUCT         LGe42
+#define DESCRIPTION     LG2 42 keys mechanical keyboard
 
 /* key matrix size */
 #define MATRIX_ROWS 4
@@ -41,8 +41,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_COL_PINS { F7, F6, F5, F4, F1, F0, D7, B5, B6, B7, D6, C7 }
-#define MATRIX_ROW_PINS { D2, D3, D1, D0 }
+#define MATRIX_COL_PINS { D7, E6, B4, B5, B6, B2, B3, B1, F7, F6, F5, F4 }
+#define MATRIX_ROW_PINS { D1, D0, D4, C6 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL, or CUSTOM_MATRIX */

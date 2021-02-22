@@ -2,7 +2,7 @@
 MCU = atmega32u4
 
 # Processor frequency
-F_CPU = 8000000
+#F_CPU = 16000000
 
 # Bootloader selection
 #   Teensy       halfkay
@@ -17,8 +17,8 @@ BOOTLOADER = caterina
 # Build Options
 #   change yes to no to disable
 #
-BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration
-MOUSEKEY_ENABLE = yes       # Mouse keys
+BOOTMAGIC_ENABLE = yes      # Virtual DIP switch configuration
+MOUSEKEY_ENABLE = no        # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = no         # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
@@ -36,4 +36,3 @@ HD44780_ENABLE = no         # Enable support for HD44780 based LCDs
 UNICODE_ENABLE = no         # Unicode
 UNICODEMAP_ENABLE = no      # ^^
 UCIS_ENABLE = no            # ^^
-BLUETOOTH = AdafruitBLE

@@ -1,6 +1,6 @@
 # qmk-lge42
 
-It's a 40% keyboard using an Adafruit Feather 32u4 Bluefruit LE (https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/overview).
+It's a 40% keyboard using an pro micro controler
 
 For the case, I'm using a Daisy 40% case from Aliexpress (https://fr.aliexpress.com/item/32833298847.html?spm=a2g0s.9042311.0.0.339e6c37LPkrLY).
 
