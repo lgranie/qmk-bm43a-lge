@@ -21,12 +21,14 @@ enum {
 
 // Tap Dance definitions
 qk_tap_dance_action_t tap_dance_actions[] = {
-    // double tap ctrl + key
+    // double tap LCTL + key
     [TD_B] = ACTION_TAP_DANCE_DOUBLE(KC_B, LCTL(KC_B)),
     [TD_C] = ACTION_TAP_DANCE_DOUBLE(KC_C, LCTL(KC_C)),
     [TD_V] = ACTION_TAP_DANCE_DOUBLE(KC_V, LCTL(KC_V)),
-    [TD_LEFT] = ACTION_TAP_DANCE_DOUBLE(KC_V, LGUI(KC_LEFT)),
-    [TD_RGHT] = ACTION_TAP_DANCE_DOUBLE(KC_V, LGUI(KC_RGHT))
+    
+    // double tap LGUI + key
+    [TD_LEFT] = ACTION_TAP_DANCE_DOUBLE(KC_LEFT, LGUI(KC_LEFT)),
+    [TD_RGHT] = ACTION_TAP_DANCE_DOUBLE(KC_RGHT, LGUI(KC_RGHT))
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
