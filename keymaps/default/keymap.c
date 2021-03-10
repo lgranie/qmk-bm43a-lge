@@ -10,6 +10,25 @@ enum layer_names {
   _FR
 };
 
+// Tap Dance declarations
+enum {
+    TD_B,
+    TD_C,
+    TD_V,
+    TD_LEFT,
+    TD_RGHT,
+};
+
+// Tap Dance definitions
+qk_tap_dance_action_t tap_dance_actions[] = {
+    // double tap ctrl + key
+    [TD_B] = ACTION_TAP_DANCE_DOUBLE(KC_B, LCTL(KC_B)),
+    [TD_C] = ACTION_TAP_DANCE_DOUBLE(KC_C, LCTL(KC_C)),
+    [TD_V] = ACTION_TAP_DANCE_DOUBLE(KC_V, LCTL(KC_V)),
+    [TD_LEFT] = ACTION_TAP_DANCE_DOUBLE(KC_V, LGUI(KC_LEFT)),
+    [TD_RGHT] = ACTION_TAP_DANCE_DOUBLE(KC_V, LGUI(KC_RGHT))
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Keymap _BL: (Base Layer) Default Layer
    * ,-----------------------------------------------.
@@ -25,8 +44,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BL] = LAYOUT(
       KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSPC,
       KC_TAB,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,       KC_ENT,
-      KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M, KC_COMM, KC_DOT, KC_SLSH,
-      KC_LCTL, KC_LGUI, KC_LALT,          MO(_FL),     LT(_FR, KC_SPC),  KC_LEFT, KC_DOWN, KC_RGHT
+      KC_LSFT,   KC_Z,    KC_X, TD(TD_C), TD(TD_V), TD(TD_B),    KC_N,    KC_M, KC_COMM, KC_DOT, KC_SLSH,
+      KC_LCTL, KC_LGUI, KC_LALT,          MO(_FL),     LT(_FR, KC_SPC),  TD(TD_LEFT), KC_DOWN, TD(TD_RGHT)
     ),
   /* Keymap _FL: (Function Left Layer) Left Layer
    * ,-----------------------------------------------.

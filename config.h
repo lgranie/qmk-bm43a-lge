@@ -20,12 +20,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6060
+#define VENDOR_ID       0x1603
+#define PRODUCT_ID      0x6661
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    LGe
 #define PRODUCT         LGe42
-#define DESCRIPTION     LG2 42 keys mechanical keyboard
+#define DESCRIPTION     LGe 42 keys mechanical keyboard
 
 /* key matrix size */
 #define MATRIX_ROWS 4
@@ -56,7 +56,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
-//#define TAPPING_TERM 100
+#define TAPPING_TERM 100
 
 /* disable debug print */
 //#define NO_DEBUG
