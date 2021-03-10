@@ -14,7 +14,12 @@ enum layer_names {
 enum {
     TD_B,
     TD_C,
+    TD_D,
+    TD_J,
+    TD_K,
+    TD_R,
     TD_V,
+    TD_Z,
     TD_LEFT,
     TD_RGHT,
 };
@@ -24,7 +29,12 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     // double tap LCTL + key
     [TD_B] = ACTION_TAP_DANCE_DOUBLE(KC_B, LCTL(KC_B)),
     [TD_C] = ACTION_TAP_DANCE_DOUBLE(KC_C, LCTL(KC_C)),
+    [TD_D] = ACTION_TAP_DANCE_DOUBLE(KC_D, LCTL(KC_D)),
+    [TD_J] = ACTION_TAP_DANCE_DOUBLE(KC_J, LCTL(KC_J)),
+    [TD_K] = ACTION_TAP_DANCE_DOUBLE(KC_K, LCTL(KC_K)),
+    [TD_R] = ACTION_TAP_DANCE_DOUBLE(KC_R, LCTL(KC_R)),
     [TD_V] = ACTION_TAP_DANCE_DOUBLE(KC_V, LCTL(KC_V)),
+    [TD_Z] = ACTION_TAP_DANCE_DOUBLE(KC_Z, LCTL(KC_Z)),
     
     // double tap LGUI + key
     [TD_LEFT] = ACTION_TAP_DANCE_DOUBLE(KC_LEFT, LGUI(KC_LEFT)),
@@ -44,10 +54,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-----------------------------------------------'
    */
     [_BL] = LAYOUT(
-      KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSPC,
-      KC_TAB,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,       KC_ENT,
-      KC_LSFT,   KC_Z,    KC_X, TD(TD_C), TD(TD_V), TD(TD_B),    KC_N,    KC_M, KC_COMM, KC_DOT, KC_SLSH,
-      KC_LCTL, KC_LGUI, KC_LALT,          MO(_FL),     LT(_FR, KC_SPC),  TD(TD_LEFT), KC_DOWN, TD(TD_RGHT)
+      KC_ESC,      KC_Q,    KC_W,     KC_E, TD(TD_R),     KC_T,    KC_Y,     KC_U,     KC_I,    KC_O,    KC_P, KC_BSPC,
+      KC_TAB,      KC_A,    KC_S, TD(TD_D),     KC_F,     KC_G,    KC_H, TD(TD_J), TD(TD_K),    KC_L,       KC_ENT,
+      KC_LSFT, TD(TD_Z),    KC_X, TD(TD_C), TD(TD_V), TD(TD_B),    KC_N,     KC_M,  KC_COMM,  KC_DOT, KC_SLSH,
+      KC_LCTL,  KC_LGUI, KC_LALT,          MO(_FL),     LT(_FR, KC_SPC),  TD(TD_LEFT), KC_DOWN, TD(TD_RGHT)
     ),
   /* Keymap _FL: (Function Left Layer) Left Layer
    * ,-----------------------------------------------.
